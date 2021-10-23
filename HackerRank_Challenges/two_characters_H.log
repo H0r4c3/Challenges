@@ -1,0 +1,258 @@
+2021-09-16 21:25:21 INFO     [two_characters_H.py:99] Call remove_consec_duplicates(s) method
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:103] The string after remove_consec_duplicates = asdcbsdcagfsdbgdfanfghbsfdab
+2021-09-16 21:25:21 INFO     [two_characters_H.py:116] Create a set with the unique letters and make a list with all combinations of two letters: combinations_of_two(st_rem) method
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:119] comb_two = [('d', 'a'), ('d', 'b'), ('d', 's'), ('d', 'n'), ('d', 'g'), ('d', 'f'), ('d', 'h'), ('d', 'c'), ('a', 'b'), ('a', 's'), ('a', 'n'), ('a', 'g'), ('a', 'f'), ('a', 'h'), ('a', 'c'), ('b', 's'), ('b', 'n'), ('b', 'g'), ('b', 'f'), ('b', 'h'), ('b', 'c'), ('s', 'n'), ('s', 'g'), ('s', 'f'), ('s', 'h'), ('s', 'c'), ('n', 'g'), ('n', 'f'), ('n', 'h'), ('n', 'c'), ('g', 'f'), ('g', 'h'), ('g', 'c'), ('f', 'h'), ('f', 'c'), ('h', 'c')]
+2021-09-16 21:25:21 INFO     [two_characters_H.py:122] Create a list with the letters for removing from the st_rem in order to remain only the combinations of two letters
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:125] letters_for_del_list = [['s', 'b', 'n', 'g', 'f', 'h', 'c'], ['a', 's', 'n', 'g', 'f', 'h', 'c'], ['a', 'b', 'n', 'g', 'f', 'h', 'c'], ['a', 'b', 's', 'g', 'f', 'h', 'c'], ['a', 'b', 's', 'n', 'f', 'h', 'c'], ['a', 'b', 's', 'n', 'g', 'h', 'c'], ['a', 'b', 's', 'n', 'g', 'f', 'c'], ['a', 'b', 's', 'n', 'g', 'f', 'h'], ['d', 's', 'n', 'g', 'f', 'h', 'c'], ['d', 'b', 'n', 'g', 'f', 'h', 'c'], ['d', 's', 'b', 'g', 'f', 'h', 'c'], ['d', 's', 'b', 'n', 'f', 'h', 'c'], ['d', 's', 'b', 'n', 'g', 'h', 'c'], ['d', 's', 'b', 'n', 'g', 'f', 'c'], ['d', 's', 'b', 'n', 'g', 'f', 'h'], ['d', 'a', 'n', 'g', 'f', 'h', 'c'], ['d', 'a', 's', 'g', 'f', 'h', 'c'], ['d', 'a', 's', 'n', 'f', 'h', 'c'], ['d', 'a', 's', 'n', 'g', 'h', 'c'], ['d', 'a', 's', 'n', 'g', 'f', 'c'], ['d', 'a', 's', 'n', 'g', 'f', 'h'], ['d', 'a', 'b', 'g', 'f', 'h', 'c'], ['d', 'a', 'b', 'n', 'f', 'h', 'c'], ['d', 'a', 'b', 'n', 'g', 'h', 'c'], ['d', 'a', 'b', 'n', 'g', 'f', 'c'], ['d', 'a', 'b', 'n', 'g', 'f', 'h'], ['d', 'a', 'b', 's', 'f', 'h', 'c'], ['d', 'a', 'b', 's', 'g', 'h', 'c'], ['d', 'a', 'b', 's', 'g', 'f', 'c'], ['d', 'a', 'b', 's', 'g', 'f', 'h'], ['d', 'a', 'b', 's', 'n', 'h', 'c'], ['d', 'a', 'b', 's', 'n', 'f', 'c'], ['d', 'a', 'b', 's', 'n', 'f', 'h'], ['d', 'a', 'b', 's', 'n', 'g', 'c'], ['d', 'a', 'b', 's', 'n', 'g', 'h'], ['d', 'a', 'b', 's', 'n', 'g', 'f']]
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:136] list_of_strings made only of two letters = ['addaddada', 'dbddbdbdb', 'sdsdsddsd', 'ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 INFO     [two_characters_H.py:139] Verify that the letters are alternative (not consecutive) and remove the wrong strings
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['addaddada', 'dbddbdbdb', 'sdsdsddsd', 'ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = addaddada
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = addaddada
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = addaddada
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item addaddada in list of strings ['addaddada', 'dbddbdbdb', 'sdsdsddsd', 'ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = addaddada
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['dbddbdbdb', 'sdsdsddsd', 'ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['dbddbdbdb', 'sdsdsddsd', 'ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = dbddbdbdb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = dbddbdbdb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = dbddbdbdb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = dbddbdbdb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item dbddbdbdb in list of strings ['dbddbdbdb', 'sdsdsddsd', 'ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = dbddbdbdb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['sdsdsddsd', 'ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['sdsdsddsd', 'ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = sdsdsddsd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = sdsdsddsd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = sdsdsddsd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = sdsdsddsd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = sdsdsddsd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = sdsdsddsd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = sdsdsddsd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item sdsdsddsd in list of strings ['sdsdsddsd', 'ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = sdsdsddsd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ddddnd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ddddnd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ddddnd in list of strings ['ddddnd', 'ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ddddnd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ddgdgdgd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ddgdgdgd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ddgdgdgd in list of strings ['ddgdgdgd', 'ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ddgdgdgd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ddfddfffd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ddfddfffd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ddfddfffd in list of strings ['ddfddfffd', 'ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ddfddfffd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ddddhd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ddddhd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ddddhd in list of strings ['ddddhd', 'dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ddddhd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = dcdcddd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = dcdcddd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = dcdcddd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = dcdcddd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = dcdcddd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = dcdcddd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item dcdcddd in list of strings ['dcdcddd', 'abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = dcdcddd
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = abababab
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = abababab
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = abababab
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = abababab
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = abababab
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = abababab
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = abababab
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = abababab
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = assasasa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = assasasa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = assasasa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item assasasa in list of strings ['abababab', 'assasasa', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = assasasa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = aaana
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = aaana
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item aaana in list of strings ['abababab', 'aaana', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = aaana
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = aaggaga
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = aaggaga
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item aaggaga in list of strings ['abababab', 'aaggaga', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = aaggaga
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = aaffaffa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = aaffaffa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item aaffaffa in list of strings ['abababab', 'aaffaffa', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = aaffaffa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = aaaha
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = aaaha
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item aaaha in list of strings ['abababab', 'aaaha', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = aaaha
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = accaaa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = accaaa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = accaaa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item accaaa in list of strings ['abababab', 'accaaa', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = accaaa
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = sbssbbsb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = sbssbbsb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = sbssbbsb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = sbssbbsb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item sbssbbsb in list of strings ['abababab', 'sbssbbsb', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = sbssbbsb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = bbnbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = bbnbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item bbnbb in list of strings ['abababab', 'bbnbb', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = bbnbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = bgbggbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = bgbggbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = bgbggbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = bgbggbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = bgbggbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item bgbggbb in list of strings ['abababab', 'bgbggbb', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = bgbggbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = bfbffbfb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = bfbffbfb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = bfbffbfb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = bfbffbfb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = bfbffbfb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item bfbffbfb in list of strings ['abababab', 'bfbffbfb', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = bfbffbfb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = bbhbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = bbhbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item bbhbb in list of strings ['abababab', 'bbhbb', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = bbhbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = cbcbbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = cbcbbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = cbcbbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = cbcbbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = cbcbbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item cbcbbb in list of strings ['abababab', 'cbcbbb', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = cbcbbb
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = sssns
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = sssns
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item sssns in list of strings ['abababab', 'sssns', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = sssns
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ssgsggs
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ssgsggs
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ssgsggs in list of strings ['abababab', 'ssgsggs', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ssgsggs
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ssfsffsf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ssfsffsf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ssfsffsf in list of strings ['abababab', 'ssfsffsf', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ssfsffsf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ssshs
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ssshs
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ssshs in list of strings ['abababab', 'ssshs', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ssshs
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = scscss
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = scscss
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = scscss
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = scscss
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = scscss
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = scscss
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item scscss in list of strings ['abababab', 'scscss', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = scscss
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ggng
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ggng
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ggng in list of strings ['abababab', 'ggng', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ggng
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ffnff
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ffnff
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ffnff in list of strings ['abababab', 'ffnff', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ffnff
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = nh
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = nh
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ccn
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ccn
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ccn in list of strings ['abababab', 'nh', 'ccn', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ccn
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'nh', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'nh', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = gfgffgf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = gfgffgf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = gfgffgf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:159] String OK = gfgffgf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = gfgffgf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item gfgffgf in list of strings ['abababab', 'nh', 'gfgffgf', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = gfgffgf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'nh', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'nh', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = gggh
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = gggh
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item gggh in list of strings ['abababab', 'nh', 'gggh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = gggh
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'nh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'nh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ccggg
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ccggg
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ccggg in list of strings ['abababab', 'nh', 'ccggg', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ccggg
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'nh', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'nh', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = fffhf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = fffhf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item fffhf in list of strings ['abababab', 'nh', 'fffhf', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = fffhf
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'nh', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'nh', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = ccffff
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = ccffff
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item ccffff in list of strings ['abababab', 'nh', 'ccffff', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = ccffff
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'nh', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:144] list_of_strings = ['abababab', 'nh', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:145] String to be verified = cch
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:148] String not ok = cch
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:150] if item cch in list of strings ['abababab', 'nh', 'cch']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:153] Item removed = cch
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:154] list_of_strings after removing = ['abababab', 'nh']
+2021-09-16 21:25:21 DEBUG    [two_characters_H.py:161] Remaining strings in list_of_strings = ['abababab', 'nh']
+2021-09-16 21:25:21 INFO     [two_characters_H.py:164] Pick the longest string

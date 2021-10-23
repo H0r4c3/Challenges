@@ -1,0 +1,109 @@
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('d', 'b') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3F3B0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = db
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = dbddbdbdb
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('d', 'g') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = dg
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ddgdgdgd
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('d', 'f') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = df
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ddfddfffd
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('d', 's') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = ds
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = sdsdsddsd
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('d', 'a') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = da
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = addaddada
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('d', 'h') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = dh
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ddddhd
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('d', 'c') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = dc
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = dcdcddd
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('d', 'n') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = dn
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ddddnd
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('b', 'g') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = bg
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = bgbggbb
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('b', 'f') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = bf
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = bfbffbfb
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('b', 's') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = bs
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = sbssbbsb
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('b', 'a') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = ba
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = abababab
+2021-09-16 21:47:36 DEBUG    [two_characters.py:34] m = 8
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('b', 'h') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = bh
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = bbhbb
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('b', 'c') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = bc
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = cbcbbb
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('b', 'n') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = bn
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = bbnbb
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('g', 'f') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = gf
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = gfgffgf
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('g', 's') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = gs
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ssgsggs
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('g', 'a') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = ga
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = aaggaga
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('g', 'h') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = gh
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = gggh
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('g', 'c') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = gc
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ccggg
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('g', 'n') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = gn
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ggng
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('f', 's') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = fs
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ssfsffsf
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('f', 'a') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = fa
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = aaffaffa
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('f', 'h') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = fh
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = fffhf
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('f', 'c') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = fc
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ccffff
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('f', 'n') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = fn
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ffnff
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('s', 'a') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = sa
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = assasasa
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('s', 'h') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = sh
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ssshs
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('s', 'c') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = sc
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = scscss
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('s', 'n') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = sn
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = sssns
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('a', 'h') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = ah
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = aaaha
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('a', 'c') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = ac
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = accaaa
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('a', 'n') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = an
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = aaana
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('h', 'c') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FEF0>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = hc
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = cch
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('h', 'n') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF40>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = hn
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = nh
+2021-09-16 21:47:36 DEBUG    [two_characters.py:26] for i ('c', 'n') in combinations(set(s),2) <itertools.combinations object at 0x0000028038D3FF90>
+2021-09-16 21:47:36 DEBUG    [two_characters.py:28] j = cn
+2021-09-16 21:47:36 DEBUG    [two_characters.py:30] t = re.sub("[^%s]"%j, "",s) = ccn

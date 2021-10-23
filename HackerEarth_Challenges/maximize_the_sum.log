@@ -1,0 +1,6 @@
+2021-09-25 09:47:23 DEBUG    [maximize_the_sum.py:43] count = Counter({3: 2, 8: 1, 7: 1})
+2021-09-25 09:47:23 DEBUG    [maximize_the_sum.py:46] A_set = {8, 3, 7}
+2021-09-25 09:47:23 DEBUG    [maximize_the_sum.py:55] list_of_prod = [8, 6, 7]
+2021-09-25 09:47:23 DEBUG    [maximize_the_sum.py:56] sorted(list_of_prod, reverse=True) = [8, 7, 6]
+2021-09-25 09:47:23 DEBUG    [maximize_the_sum.py:57] (sorted(list_of_prod, reverse=True))[0:K] = [8, 7, 6]
+2021-09-25 09:47:23 DEBUG    [maximize_the_sum.py:58] sum = 21

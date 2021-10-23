@@ -1,0 +1,15 @@
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:53] i = 2 = ----e-d-c-d-e----
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:54] und(n, i+1) = ----
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:55] ''.join(h[0:i+1]) = e-d-c-
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:56] ''.join(h[i:n]) = c-b-a-
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:57] alphabet[n-1] = e
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:53] i = 3 = --e-d-c-b-c-d-e--
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:54] und(n, i+1) = --
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:55] ''.join(h[0:i+1]) = e-d-c-b-
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:56] ''.join(h[i:n]) = b-a-
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:57] alphabet[n-1] = e
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:53] i = 4 = e-d-c-b-a-b-c-d-e
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:54] und(n, i+1) = 
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:55] ''.join(h[0:i+1]) = e-d-c-b-a-
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:56] ''.join(h[i:n]) = a-
+2021-08-31 23:09:54 DEBUG    [alphabet_rangoli.py:57] alphabet[n-1] = e
