@@ -15,23 +15,23 @@ For each test-case, output a single non-negative integer denoting the minimum va
 
 '''
 
-# S = [None]*10
-# T = [None]*10
-# Q = input()
-
-# for i in range (int(Q)):
-#     S[i] = input()
-#     T[i] = input()
-    
 alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-pos = []
+
 
 def shift(S, T):
+    pos = list()
     for i in range(len(S)):
         pos_S = alphabet.index(S[i])
         pos_T = alphabet.index(T[i])
-        pos.append(abs(pos_S - pos_T))
-        
+    
+        if pos_T >= pos_S:
+            encryption = pos_T - pos_S
+            pos.append(encryption)
+        elif pos_S > pos_T:
+            encryption = 26 - pos_S + pos_T
+            pos.append(encryption)
+            
+    
     if len(set(pos)) == 1:
         result = pos[0]
     else:
@@ -39,7 +39,23 @@ def shift(S, T):
         
     return result
 
-S = 'ABC' 
+
+S = 'ABC'
 T = 'DEF'
+# S = 'AAA'
+# T = 'PQR'
+S = 'U'
+T = 'R' # -> 23
+
 result = shift(S, T)
 print(result)
+
+
+
+# Q = int(input())
+
+# for _ in range(Q):
+#     S = input()
+#     T = input()
+#     result = shift(S, T)
+#     print(result)
