@@ -1,7 +1,7 @@
 
 
 def name_of_method(s, A):
-    pass
+    result = 0
 
     return result
 
