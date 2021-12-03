@@ -16,12 +16,31 @@ Output: A bool.
 '''
 
 def words_order(text: str, words: list) -> bool:
-    # your code here
-    return False
+    indexes = list()
+    text_list = text.split()
+    for item in words:
+        if item in text_list:
+            index = text_list.index(item)
+            indexes.append(index)
+        else:
+            return False
+    
+    
+    if len(words) != len(set(words)):
+        return False
+    
+    if indexes == sorted(indexes):
+        return True
+    else:
+        return False
+    
+    
+    
+    
 
 
 if __name__ == '__main__':
-    print("Example:")
+    
     print(words_order('hi world im here', ['world', 'here']))
 
     # These "asserts" are used for self-checking and not for an auto-testing

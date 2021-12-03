@@ -1,7 +1,7 @@
 'https://www.hackerearth.com/practice/algorithms/dynamic-programming/2-dimensional/practice-problems/algorithm/numbers-2-a9a00311/'
 
 '''
-ou are given a telephone number of length . Assume that the two phone numbers are similar if the following conditions are met:
+You are given a telephone number of length . Assume that the two phone numbers are similar if the following conditions are met:
 
 They are different.
 The number of positions that contains different digits does not exceed .
