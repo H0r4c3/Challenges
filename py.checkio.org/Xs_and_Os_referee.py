@@ -15,25 +15,26 @@ Output: "X", "O" or "D" as a string.
 '''
 
 import pandas as pd
+import numpy as np
 from typing import List
 
 
 def checkio(game_result: List[str]) -> str:
     game_result_lists = map(list, game_result)
     df = pd.DataFrame(game_result_lists, index=['r1', 'r2', 'r3'] , columns=['c1', 'c2', 'c3'])
-    print(df)
+    print(df, '\n')
     
-    # column
-    #print(set(df['b']))
+    # column c1
+    #print('column c1: ')
+    #print(df["c1"])
     
-    # row
-    #print(set(df.loc[2]))
+    # row r2
+    #print('row r2: ')
+    #print(df.loc["r2"])
     
-    # element
-    #print(df.at[1, 'a'])
-    
-    #print(df.nunique(axis='index')) 
-    #print(df.nunique(axis='columns')) 
+    # element intersection row r1 and column c1
+    #print('element at intersection row r1 and column c1: ')
+    #print(df.at['r1', 'c1'])
     
     col = dict(df.nunique(axis='index'))
     row = dict(df.nunique(axis='columns'))
@@ -44,30 +45,47 @@ def checkio(game_result: List[str]) -> str:
     # check the columns:
     for key, value in col.items():
         if value == 1:
-            return df.at['r1', key]
+            if df.at['r1', key] != '.':
+                return df.at['r1', key]
 
     # check the rows:  
     for key, value in row.items():
         if value == 1:
-            return df.at['r1', key]
-        else:
-            return 'D'
+            if df.at[key, 'c1'] != '.':
+                return df.at[key, 'c1']
+    
         
     # check the diagonals:
     
-                     
+    diag1 = list(pd.Series(np.diag(df), index=[df.index, df.columns]))
+    print(diag1)
+    if len(set(diag1)) == 1:
+        e = set(diag1).pop()
+        if e  != '.':
+            return e
     
+    # secondary diagonal
+    if df.at['r1', 'c3'] == df.at['r2', 'c2'] == df.at['r3', 'c1']:
+        if df.at['r1', 'c3'] != '.':
+            return df.at['r1', 'c3']
+    else:
+        return 'D'
     
-
+    return 'D'
+    
 
 
 if __name__ == "__main__":
     print("Example:")
     print(checkio(["X.O", "XX.", "XOO"]))
-    #print(checkio(["OOX", "XXO", "OXX"]))
+    print(checkio(["OOX", "XXO", "OXX"]))
+    print(checkio(["OOO", "XX.", ".XX"]))
+    print(checkio(["...","XXX","OO."]))
+    print(checkio(["O..","XOX","..O"]))
+    print(checkio([".O.","...","..."]))
 
     # These "asserts" using only for self-checking and not necessary for auto-testing
-    assert checkio(["X.O", "XX.", "XOO"]) == "X", "X wins"
-    assert checkio(["OO.", "XOX", "XOX"]) == "O", "O wins"
-    assert checkio(["OOX", "XXO", "OXX"]) == "D", "Draw"
-    assert checkio(["O.X", "XX.", "XOO"]) == "X", "X wins again"
+    # assert checkio(["X.O", "XX.", "XOO"]) == "X", "X wins"
+    # assert checkio(["OO.", "XOX", "XOX"]) == "O", "O wins"
+    # assert checkio(["OOX", "XXO", "OXX"]) == "D", "Draw"
+    # assert checkio(["O.X", "XX.", "XOO"]) == "X", "X wins again"
