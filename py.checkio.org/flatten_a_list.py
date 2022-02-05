@@ -11,15 +11,17 @@ Input data: A nested list with integers.
 Output data: The one-dimensional list with integers.
 '''
 
+# 1. Solution
 from pandas.core.common import flatten
 def flat_list(array):
     return list(flatten(array))
 
 
 
+# 2. Solution
 from itertools import chain
 from collections.abc import Iterable
-def flat_list(array):
+def flat_list_(array):
     
     def flat(array):
         result = list()
@@ -44,14 +46,23 @@ def flat_list(array):
 # https://py.checkio.org/en/mission/flatten-a-list-iterator-version/
 
 from collections.abc import Iterable
-def flat_list(array):
+def flat_list_(array):
     for i in array:
         if isinstance(i, Iterable):
             yield from flat_list(i)
         else:
             yield i
 
-    
+
+
+# Best 'Speedy' Solution for Flatten a List:
+# https://py.checkio.org/mission/flatten-list/publications/pavlik/python-3/flatten-a-list/?ordering=most_voted&filtering=all
+
+def flat_list_(array):
+    import re
+    return [int(i) for i in re.findall(r'[-]?\d+', str(array))]
+
+
 
 if __name__ == '__main__':
     #assert flat_list([1, 2, 3]) == [1, 2, 3], "First"

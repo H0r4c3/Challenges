@@ -51,6 +51,20 @@ def yaml(a):
 
 
 
+# Best solution: https://py.checkio.org/mission/yaml-more-types/publications/veky/python-3/resultkey-schemavaluestrip/?ordering=most_voted&filtering=all
+def schema(value):
+    if value.isdigit(): return int(value)
+    elif value in {'', 'null'}: return None
+    elif value in {'true', 'false'}: return value == 'true'
+    else: return value.replace('"', '').replace('\\', '')
+
+
+def yaml(markup):
+    result = {}
+    for line in markup.splitlines():
+        key, colon, value = line.partition(':')
+        if colon: result[key] = schema(value.strip())
+    return result
 
 
 

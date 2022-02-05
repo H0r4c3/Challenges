@@ -19,6 +19,23 @@ def checkio(words: str) -> bool:
     
     return False
 
+
+# Clear solution: https://py.checkio.org/mission/three-words/publications/knezi/python-3/regexp/?ordering=most_voted&filtering=choice
+import re
+def checkio(words):
+    return bool(re.compile("([a-zA-Z]+ ){2}[a-zA-Z]+").search(words))
+
+
+
+# Best solution: https://py.checkio.org/en/mission/three-words/
+import re
+
+def checkio(words):
+    return True if re.search('\D+\s\D+\s\D+', words) else False
+
+
+
+
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     print(checkio("Hello World hello"))

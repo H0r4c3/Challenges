@@ -28,6 +28,9 @@ def atbash(plaintext: str) -> str:
     
     return new_text
 
+    
+    
+
 
 if __name__ == "__main__":
     print("Example:\nplaintext: testing")

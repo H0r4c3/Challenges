@@ -29,6 +29,18 @@ def similar_triangles(coords_1: Coords, coords_2: Coords) -> bool:
         return True
     else:
         return False
+    
+    
+    
+# Best Solution: https://py.checkio.org/mission/similar-triangles/publications/flpo/python-3/are_similar-poly/?ordering=most_voted&filtering=all
+from itertools import starmap
+from sympy.geometry import Point, Polygon, are_similar
+
+def poly(points):
+    return Polygon(*starmap(Point, points))
+
+def similar_triangles(coords_1, coords_2):
+    return are_similar(poly(coords_1), poly(coords_2))
 
 
     

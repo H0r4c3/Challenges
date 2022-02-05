@@ -18,11 +18,8 @@ from typing import Iterable
 def remove_all_after(items: list, border: int) -> Iterable:
     if border not in items:
         return items
-    
-    if items == []:
-        return []
-    
-    return items[ : items.index(border) + 1]
+    else:
+        return items[ : items.index(border) + 1]
 
 
 if __name__ == '__main__':
@@ -36,3 +33,4 @@ if __name__ == '__main__':
     assert list(remove_all_after([1, 1, 5, 6, 7], 2)) == [1, 1, 5, 6, 7]
     assert list(remove_all_after([], 0)) == []
     assert list(remove_all_after([7, 7, 7, 7, 7, 7, 7, 7, 7], 7)) == [7]
+    print('Done!')

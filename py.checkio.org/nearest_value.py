@@ -19,6 +19,11 @@ def nearest_value(values: set, one: int) -> int:
     return values_list[index_ok]
 
 
+# Best solution: https://py.checkio.org/mission/nearest-value/publications/mortonfox/python-3/first/?ordering=most_voted&filtering=all
+def nearest_value(values: set, one: int) -> int:
+    return min(values, key=lambda n: (abs(one - n), n))
+
+
 if __name__ == '__main__':
     print(nearest_value({4, 7, 10, 11, 12, 17}, 8))
 

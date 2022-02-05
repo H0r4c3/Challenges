@@ -9,7 +9,30 @@ Output: Area of the biggest rectangle.
 '''
 
 def largest_histogram(histogram):
-    return max(histogram)
+    all_areas = list()
+    h = len(histogram)
+    for i in range(h):
+        for j in range(i + 1, h + 1):
+            length = len(histogram[i:j])
+            height = min(histogram[i:j])
+            area = length * height
+            all_areas.append(area)
+            #print(all_areas)
+            
+    return max(all_areas)
+
+
+
+#https://py.checkio.org/mission/largest-histogram/publications/Moff/python-3/first/?ordering=most_voted&filtering=all
+
+def largest_histogram(h):
+    result = min(h) * len(h)
+    for w in range(1, len(h)):
+        for i in range(len(h) - w + 1):
+            result = max(result, min(h[i:i + w]) * w)
+    return result
+
+
 
 
 if __name__ == "__main__":

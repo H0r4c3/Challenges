@@ -27,6 +27,15 @@ def is_all_upper(text: str) -> bool:
     return True
 
 
+
+#Best Solution: https://py.checkio.org/mission/all-upper-ii/publications/five_east_west/python-3/one-line/?ordering=most_voted&filtering=all
+def is_all_upper(text: str) -> bool:
+    # your code here
+    return text.isupper()
+
+
+
+
 if __name__ == '__main__':
     print("Example:")
     print(is_all_upper('ALL UPPER'))
