@@ -13,6 +13,7 @@ Input: Numbers as a list of integers.
 Output: The shortest chain from the first to the last number as a list of integers.
 '''
 
+# My solution (incomplete!!!!!!!)
 def checkio(numbers):
     start = str(numbers[0])
     end = str(numbers[-1])
@@ -44,6 +45,31 @@ def checkio(numbers):
     print(result3)
     
     return result2
+
+
+# Best Solution
+# https://py.checkio.org/mission/digits-doublets/publications/Amachua/python-3/first/share/b1dd1232f9be84bdb134a5b29b638455/
+distance = lambda a, b: sum([a[i]!=b[i] for i in range(len(a))])
+
+def checkio(numbers):
+    # Start with the first number.
+    paths = [[numbers.pop(0)]]
+    # BFS algorithm.
+    while paths:
+        # Get the new position.
+        current = paths.pop(0)
+        for i in range(len(numbers) - 1, -1, -1):
+            # For every remaining number check if the distance between the current one and another one is 1. (i.e. 1 letter different).
+            if distance(str(numbers[i]), str(current[-1])) != 1: continue
+            # If the distance is one and it's the last number, return the path to the final word.
+            if numbers[i] == numbers[-1]: return current+[numbers[-1]]
+            # If not add this word to the possible paths.
+            paths.append(current+[numbers.pop(i)])
+
+
+# REVIEW:
+# https://py.checkio.org/blog/digit-doublets-review/
+
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':

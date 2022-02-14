@@ -90,7 +90,7 @@ def square_board_(side: int, token: int, steps: int) -> Coordinate:
 
 
 
-
+# Best Solution:
 # https://py.checkio.org/mission/square-board/publications/tom-tom/python-3/first/share/bb881ffe7c0c3280e08c41d73d925106/
 from typing import Tuple
 Coordinate = Tuple[int, int]
@@ -100,6 +100,14 @@ def square_board_(side: int, token: int, steps: int) -> Coordinate:
     s = side - 1
     p = (token + steps) % (4 * s)
     return ((s, s - p), (2 * s - p, 0), (0, p - 2 * s), (p - 3 * s, s))[p // s]
+
+
+# Best Solution:
+# https://py.checkio.org/mission/square-board/publications/Phil15/python-3/divmod/?ordering=most_voted&filtering=all
+def square_board(side, token, steps):
+    s = side - 1
+    q, r = divmod(token + steps, s)
+    return ((s,s-r),(s-r,0),(0,r),(r,s))[q%4]
 
 
 

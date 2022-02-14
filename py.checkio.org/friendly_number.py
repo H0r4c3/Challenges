@@ -11,6 +11,10 @@ designations ( powers argument; default ['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 
 then you must append it. If you don’t have enough powers - stay at the maximum. And zero is always zero without powers, but with suffix.
 '''
 
+# https://github.com/narimiran/checkio/blob/master/friendly-number.py
+
+from decimal import Decimal
+
 def friendly_number(
     number,
     base=1000,
@@ -21,7 +25,33 @@ def friendly_number(
     """
     Format a number as friendly text, using common suffixes.
     """
-    return str(number)
+    
+    number = Decimal(number)
+    power = 0
+    
+    while abs(number) >= base and power < len(powers)-1:
+        power += 1
+        number /= base
+    number = round(number, decimals) if decimals else int(number)
+
+    print('{:.{dec}f}{}{}'.format(number, powers[power], suffix, dec=decimals))
+    return '{:.{dec}f}{}{}'.format(number, powers[power], suffix, dec=decimals)
+
+
+# Another Solution:
+# https://py.checkio.org/mission/friendly-number/publications/gyahun_dash/python-3/second/?ordering=most_voted&filtering=all
+def friendly_number(number, base=1000, decimals=0, suffix='',
+                    powers=['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y']):
+
+    exponents = [e for e in range(len(powers)) if base**e <= abs(number)]
+    exponent = max(exponents) if exponents != [] else 0
+
+    divided = number / base**exponent
+    approx = round(divided, decimals) if decimals > 0 else int(divided)
+
+    return '{:.{}f}{}{}'.format(approx, decimals, powers[exponent], suffix)
+    
+    
 
 
 # These "asserts" using only for self-checking and not necessary for auto-testing
@@ -31,3 +61,4 @@ if __name__ == "__main__":
     assert friendly_number(12341234, decimals=1) == "12.3M", "12.3M"
     assert friendly_number(12461, decimals=1) == "12.5k", "12.5k"
     assert friendly_number(1024000000, base=1024, suffix="iB") == "976MiB", "976MiB"
+    print('Done!')

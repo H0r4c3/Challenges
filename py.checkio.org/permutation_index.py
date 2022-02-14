@@ -10,7 +10,7 @@ from typing import Tuple
 
 from itertools import permutations
 # take too much time (ErrorProcessOutOfSystemLimits)
-def permutation_index(numbers: Tuple[int])->int:
+def permutation_index_(numbers: Tuple[int])->int:
     numbers_ord = sorted(numbers)
     perm = permutations(numbers_ord)
     
