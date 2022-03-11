@@ -35,6 +35,22 @@ def reversed_permutation_index(length: int, index: int) -> Iterable[int]:
     return (tuple(perm))
 
 
+
+# Best Solution
+from math import factorial
+def reversed_permutation_index(length: int, index: int) -> Iterable[int]:
+    '''
+    https://en.wikipedia.org/wiki/Factorial_number_system
+    '''
+    numbers = list(range(length))
+    l, m = length - 1, index - 1
+    while numbers:
+        n, m = divmod(m, factorial(l))
+        l -= 1
+        yield numbers.pop(n)
+
+
+
 if __name__ == '__main__':
     assert tuple(reversed_permutation_index(3, 5)) == (2, 0, 1)
     assert tuple(reversed_permutation_index(9, 279780)) == (6, 8, 3, 4, 2, 1, 7, 5, 0)

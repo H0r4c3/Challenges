@@ -26,6 +26,14 @@ def second_index(text: str, symbol: str):
     return index2
 
 
+# Best Solution:
+# https://py.checkio.org/mission/second-index/publications/StanislauL/python-3/first/?ordering=most_voted&filtering=all
+
+def second_index(text: str, symbol: str):
+    num = text.find(symbol, text.find(symbol)+1)
+    return num if num>-1 else None
+
+
 if __name__ == '__main__':
     print('Example:')
     print(second_index("sims", "s"))

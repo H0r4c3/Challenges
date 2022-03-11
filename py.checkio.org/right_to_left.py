@@ -22,6 +22,16 @@ def left_join(phrases: tuple) -> str:
     return result
 
 
+# Best Solution: 
+# https://py.checkio.org/mission/right-to-left/publications/mr.floppy/python-3/first/?ordering=most_voted&filtering=all
+
+def left_join(phrases):
+    """
+        Join strings and replace "right" to "left"
+    """
+    return (",".join(phrases)).replace("right","left")
+
+
 if __name__ == "__main__":
     print("Example:")
     print(left_join(("left", "right", "left", "stop")))

@@ -16,6 +16,13 @@ def all_the_same(elements: List[Any]) -> bool:
         return True
     else:
         return False
+    
+    
+# Best Solution:
+# https://py.checkio.org/mission/all-the-same/publications/tom-tom/python-3/fifth/?ordering=most_voted&filtering=choice
+
+def all_the_same(elements):
+   return elements[1:] == elements[:-1]
 
 
 if __name__ == '__main__':

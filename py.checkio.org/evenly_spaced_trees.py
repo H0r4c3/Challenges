@@ -68,6 +68,7 @@ def evenly_spaced_trees(trees):
     return sum(d // delta - 1 for d in spaces)
 
 
+
 if __name__ == '__main__':
     print("Example:")
     #print(evenly_spaced_trees([0, 2, 6]))

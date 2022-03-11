@@ -8,21 +8,13 @@ The task uses digits and the letters A-Z for the strings.
 Watch out for cases when the number cannot be converted. For example: "1A" cannot be converted with radix 9. For these cases your function should return -1.
 '''
 
-import string
 def checkio(str_number: str, radix: int) -> int:
-    p = string.digits + string.ascii_uppercase # "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    multiplier = 1
-    result = 0   
-    str_number_rev = str_number[::-1]
-    
-    for i in str_number_rev:
-        if p.find(i) < radix:
-            result += p.find(i) * multiplier
-            multiplier = multiplier * radix
-        else:
-            return -1
-          
-    return result
+    try:
+        return int(str_number, radix)
+    except ValueError:
+        return -1
+
+
 
 
 if __name__ == '__main__':
