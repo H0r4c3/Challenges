@@ -1,5 +1,5 @@
 # Challenges
-HackerEarth, HackerRank, LeetCode, bynarysearch, py.checkio, codewars, projecteuler
+HackerEarth, HackerRank, LeetCode, bynarysearch, py.checkio, codewars, projecteuler (my solutions + other's solutions for the problems posted on these sites)
 
 https://www.hackerearth.com/practice/
 
