@@ -79,6 +79,49 @@ def fortress_cannons(fort, cannons, enemies):
 
     return None
 
+
+# Best Solution:
+# https://py.checkio.org/mission/fortress-cannons/publications/tom-tom/python-3/first/?ordering=most_voted&filtering=all
+
+from itertools import product
+
+def fortress_cannons(fort, cannons, enemies):
+    DIRECTION = 'N', 'NE', 'SE', 'S', 'SW', 'NW'
+    IN_WEDGE = {0: lambda x, y, z: x == 0 and y > 0,
+               60: lambda x, y, z: y >= x >= z,
+              120: lambda x, y, z: y >= 0 and z <= 0}
+    
+    def cube(pos):
+        """Cube coordinates"""
+        x = ord(pos[0]) - ord('A')
+        z = int(pos[1]) - x // 2
+        return x, - x - z, z
+    
+    fort = cube(fort)
+    
+    #  enemy cube coordinates relative to the fort
+    enemies = [tuple(i - j for i, j in zip(cube(enemy), fort)) for enemy in enemies]
+    all_enemies = set(range(len(enemies)))
+
+    def can_shoot(cannon, enemy):
+        angle, min_distance, max_distance = cannon
+        return min_distance <= max(map(abs, enemy)) <= max_distance and IN_WEDGE[angle](*enemy)
+    
+    #  enemies shot by each cannon in each direction
+    reach = [{} for _ in cannons]
+    for direction in DIRECTION:
+        for n, cannon in enumerate(cannons):
+            reach[n][direction] = {i for i, enemy in enumerate(enemies) if can_shoot(cannon, enemy)}
+            
+        #  rotate enemies around the fort
+        enemies = [(-y, -z, -x) for x, y, z in enemies]
+    
+    for directions in product(DIRECTION, repeat=len(cannons)):
+        if set().union(*(reach[n][direction] for n, direction in enumerate(directions))) == all_enemies:
+            return list(directions)
+
+
+
 if __name__ == '__main__':
     assert fortress_cannons('F5', [(0, 1, 4)], {'F2'}) == ['N'], '0 degree'
     assert fortress_cannons('F5', [(60, 1, 6)], {'K4'}) == ['NE'], '60 degree' 

@@ -7,7 +7,7 @@ When solving this task, do not change the order of the list.
 Example: [1, 2, 3, 1, 3] 1 and 3 non-unique elements and result will be [1, 3, 1, 3].
 '''
 
-def checkio(data: list) -> list:
+def checkio_(data: list) -> list:
     result = list()
     for item in data:
         if data.count(item) > 1:
@@ -15,10 +15,15 @@ def checkio(data: list) -> list:
         
     return result
 
-#Some hints
-#You can use list.count(element) method for counting.
-#Create new list with non-unique elements
-#Loop over original list
+
+
+# A new Solution, using yield
+def checkio(data: list) -> list:
+    for item in data:
+        if data.count(item) > 1:
+            yield item
+    
+
 
 
 if __name__ == "__main__":
@@ -27,3 +32,4 @@ if __name__ == "__main__":
     assert list(checkio([1, 2, 3, 4, 5])) == [], "2nd example"
     assert list(checkio([5, 5, 5, 5, 5])) == [5, 5, 5, 5, 5], "3rd example"
     assert list(checkio([10, 9, 10, 10, 9, 8])) == [10, 9, 10, 10, 9], "4th example"
+    print('Done!!!')

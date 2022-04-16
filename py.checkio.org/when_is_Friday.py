@@ -21,11 +21,12 @@ def friday_(day):
 
 # another solution (using pandas)
 import pandas as pd
-def friday_(day):
+def friday(day):
     d = pd.Timestamp(day)
     nr = d.weekday()
     print(nr)
-    result = 4 - nr if nr <= 4 else 6 - nr + 5
+    #result = 4 - nr if nr <= 4 else 6 - nr + 5
+    result = (4 - nr) % 7
     print(result)
 
     return result
@@ -34,7 +35,7 @@ def friday_(day):
 # Best solution: https://py.checkio.org/mission/when-is-friday/publications/flpo/python-3/4-dateweekday-7/?ordering=most_voted&filtering=all#comment-111185
 import datetime
 
-def friday(day):
+def friday_(day):
     d, m, y = map(int, day.split('.'))
     date = datetime.date(y, m, d)
     print(date)
@@ -45,10 +46,10 @@ def friday(day):
 
 if __name__ == '__main__':
     print("Example:")
-    #print(friday('23.04.2018'))
+    print(friday('23.04.2018'))
 
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    #assert friday('23.04.2018') == 4
-    #assert friday('01.01.1999') == 0
+    assert friday('23.04.2018') == 4
+    assert friday('01.01.1999') == 0
     assert friday("11.11.1111") == 6
     print("Coding complete? Click 'Check' to earn cool rewards!")

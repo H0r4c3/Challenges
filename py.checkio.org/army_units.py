@@ -20,91 +20,73 @@ All 3 classes (Swordsman, Lancer, and Archer) should have the introduce() method
 In this mission you should use the Abstract Factory design pattern.
 '''
 
+class Soldier:
+    def __init__(self, name, army, unique_name):
+        self.name = name
+        self.army = army
+        self.unique_name = unique_name
+        
+    def introduce(self):
+        return f'{self.unique_name} {self.name}, {self.army} {self.soldier_type}'
+
+class Swordsman(Soldier):
+    soldier_type = 'swordsman'
+    
+class Lancer(Soldier):
+    soldier_type = 'lancer'
+    
+class Archer(Soldier):
+    soldier_type = 'archer'
+
 class Army:
-    pass
-
-class Swordsman:
-    pass
-
-class Lancer:
-    pass
-
-class Archer:
-    pass
-
-class AsianArmy(Army):
-    pass
+    def train_swordsman(self, name):
+        return Swordsman(name, self.continent, self.swordsman)
+    
+    def train_lancer(self, name):
+        return Lancer(name, self.continent, self.lancer)
+    
+    def train_archer(self, name):
+        return Archer(name, self.continent, self.archer)
 
 class EuropeanArmy(Army):
-    pass
+    continent = 'European'
+    swordsman = 'Knight'
+    lancer = 'Raubritter'
+    archer = 'Ranger'
+
+class AsianArmy(Army):
+    continent = 'Asian'
+    swordsman = 'Samurai'
+    lancer = 'Ronin'
+    archer = 'Shinobi'
 
 
 
 # Best Solution: 
-# https://py.checkio.org/mission/army-units/publications/kurosawa4434/python-3/first/share/cc6fb88b6b50e6bbf558cc706c3561ad/
+# https://py.checkio.org/mission/army-units/publications/Phil15/python-3/short/?ordering=most_voted&filtering=all
 
-class job:
-    def __init__(self, job_name, area, name):
-        self.job_name = job_name
-        self.name = name
-        self.area = area
-
+class Soldier:
+    def __init__(self, name, army, title):
+        self.name, self.army, self.title = name, army, title
     def introduce(self):
-        pass
+        return f"{self.title} {self.name}, {self.army} {self.army_type}"
 
-
-class Swordsman(job):
-    def introduce(self):
-        return f'{self.job_name} {self.name}, {self.area} swordsman'
-
-
-class Lancer(job):
-    def introduce(self):
-        return f'{self.job_name} {self.name}, {self.area} lancer'
-
-
-class Archer(job):
-    def introduce(self):
-        return f'{self.job_name} {self.name}, {self.area} archer'
-
+class Swordsman(Soldier):army_type = 'swordsman'
+class Lancer(Soldier):army_type = 'lancer'
+class Archer(Soldier):army_type = 'archer'
 
 class Army:
     def train_swordsman(self, name):
-        pass
-
+        return Swordsman(name, self.nation, self.swordsman)
     def train_lancer(self, name):
-        pass
-
+        return Lancer(name, self.nation, self.lancer)
     def train_archer(self, name):
-        pass
-
+        return Archer(name, self.nation, self.archer)
 
 class AsianArmy(Army):
-    def __init__(self):
-        self.area = 'Asian'
-
-    def train_swordsman(self, name):
-        return Swordsman('Samurai', self.area, name)
-
-    def train_lancer(self, name):
-        return Lancer('Ronin', self.area, name)
-
-    def train_archer(self, name):
-        return Archer('Shinobi', self.area, name)
-
-
+    nation, swordsman, lancer, archer = 'Asian', 'Samurai', 'Ronin', 'Shinobi'
 class EuropeanArmy(Army):
-    def __init__(self):
-        self.area = 'European'
-
-    def train_swordsman(self, name):
-        return Swordsman('Knight', self.area, name)
-
-    def train_lancer(self, name):
-        return Lancer('Raubritter', self.area, name)
-
-    def train_archer(self, name):
-        return Archer('Ranger', self.area, name)
+    nation, swordsman, lancer, archer = 'European', 'Knight', 'Raubritter', 'Ranger'
 
 
 

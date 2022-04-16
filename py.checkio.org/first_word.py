@@ -22,6 +22,23 @@ def first_word(text: str) -> str:
     return words[0]
 
 
+# Best Solution: 
+# https://py.checkio.org/mission/first-word/publications/Moff/python-3/first/
+
+import re
+
+def first_word(text: str) -> str:
+    return re.search("([\w']+)", text).group(1)
+
+'''
+() - means group
+[] - set of symbols
+\w - any letter
+[\w'] - any letter or '
+[\w']+ - any letter or ' one or more times
+'''
+
+
 if __name__ == '__main__':
     print("Example:")
     print(first_word("Hello world"))

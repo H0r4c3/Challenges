@@ -6,7 +6,7 @@ If it has an odd amount of elements, then the first array should have more eleme
 If it has no elements, then two empty arrays should be returned.
 '''
 
-def split_list(items: list) -> list:
+def split_list_(items: list) -> list:
     result = list()
     
     if items == []:
@@ -29,6 +29,16 @@ def split_list(items: list) -> list:
         result.append(list2)
         
         return result
+    
+
+# Best Solution: 
+# https://py.checkio.org/mission/split-list/publications/Roman_13/python-3/first/?ordering=most_voted&filtering=all
+
+import numpy as np
+
+def split_list(items: list) -> list:
+    
+    return np.array_split(items,2)
 
 
 if __name__ == '__main__':

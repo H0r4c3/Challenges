@@ -11,7 +11,7 @@ Output: The iterable of integers.
 
 from typing import Iterable
 
-def expand_intervals(items: Iterable) -> Iterable:
+def expand_intervals_(items: Iterable) -> Iterable:
     result = list()
     for item in items:
         result.extend(range(item[0], item[-1] + 1))
@@ -19,6 +19,15 @@ def expand_intervals(items: Iterable) -> Iterable:
     print(result)
     
     return(result)
+
+
+# Best Solution:
+# https://py.checkio.org/mission/expand-intervals/publications/oduvan/python-3/simple-yield/
+
+def expand_intervals(items: Iterable) -> Iterable:
+    for item in items:
+        for i in range(item[0], item[1] + 1):
+            yield i
 
 
 if __name__ == '__main__':

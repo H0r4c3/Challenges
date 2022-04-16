@@ -21,6 +21,16 @@ def seven_segment(lit_seg, broken_seg):
     return len([s for s in num if lit_seg.union(broken_seg) >= s>= lit_seg])
 
 
+
+# Another Best Solution: 
+# https://py.checkio.org/mission/seven-segment/publications/MrPod/python-3/analog-is-better/?ordering=most_voted&filtering=all
+nums = {'ABCDEF', 'BC', 'ABGED', 'ABGCD', 'FGBC', 'AFGCD', 'AFGCDE', 'ABC', 'ABCDEFG', 'ABCDFG'}
+
+def seven_segment(lit, broken):
+    return sum(set(lit) <= set(i) | set(j.lower()) <= set(lit) | set(broken) for i in nums for j in nums)
+
+
+
 if __name__ == '__main__':
     assert seven_segment({'B', 'C', 'b', 'c'}, {'A'}) == 2, '11, 71'
     assert seven_segment({'B', 'C', 'a', 'f', 'g', 'c', 'd'}, {'A', 'G', 'D', 'e'}) == 6, '15, 16, 35, 36, 75, 76'
