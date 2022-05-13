@@ -25,6 +25,21 @@ def checkio(data):
     return abs(area_x_2 / 2)
 
 
+# BEST Solution: using iter() !!!!!!!!!!!!!
+'https://py.checkio.org/mission/area-of-a-convex-polygon/publications/htamas/python-3/first/?ordering=most_voted&filtering=all'
+
+def checkio(data):
+    area = 0
+    data = iter(data)
+    ax, ay = next(data)
+    bx, by = next(data)
+    for cx, cy in data:
+        area += (ax-cx)*(by-ay) - (ax-bx)*(cy-ay)
+        bx, by = cx, cy
+        
+    return abs(area) / 2
+
+
 
 if __name__ == '__main__':
     #This part is using only for self-checking and not necessary for auto-testing

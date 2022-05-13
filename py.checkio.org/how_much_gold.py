@@ -46,6 +46,14 @@ def checkio_(alloys):
     return (bar - 1) / 2
 
 
+# Another Best Solution:
+# https://py.checkio.org/mission/how-much-gold/publications/freeman_lex/python-3/1-line/?ordering=most_voted&filtering=all
+
+from fractions import Fraction
+
+checkio = lambda A: (sum(A[i] if 'gold' in i else 1 - A[i] for i in A) - 1) / 2
+
+
 
 
 #These "asserts" using only for self-checking and not necessary for auto-testing

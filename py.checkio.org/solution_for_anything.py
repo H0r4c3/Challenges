@@ -11,17 +11,38 @@ Input: Some data. Maybe that data over there.
 Output: The something as a something-else.
 '''
 
+class Compare_Class:
+    
+    def __init__(self, anything):
+        self.anything = anything
+        
+        
+    def __lt__(self, other):
+        return True
+    
+    def __gt__(self, other):
+        return True
+
+    def __le__(self, other):
+        return True
+
+    def __ge__(self, other):
+        return True
+
+    def __eq__(self, other):
+        return True
+
+    def __ne__(self, other):
+        return True
+        
 def checkio(anything):
-    """
-        try to return anything else :)
-    """
-    return True
+    return Compare_Class(anything)
 
 
 # Best Solution: 
 # https://py.checkio.org/mission/solution-for-anything/publications/Sim0000/python-3/first/share/bddc7370009d25c823d3ee6b862c9e23/
 
-def checkio(anything):
+def checkio_(anything):
     class T:
         __lt__=__gt__=__le__=__ge__=__eq__=__ne__ = lambda a, b: True
         

@@ -8,6 +8,7 @@ Input: A string.
 Output: a boolean.
 '''
 
+# My First Solution
 def is_all_upper(text: str) -> bool:
     if text == '':
         return True
@@ -19,6 +20,24 @@ def is_all_upper(text: str) -> bool:
     return True
 
 text = 'all lower'
+
+
+# My Second Solution:
+import re
+def is_all_upper_(text: str) -> bool:
+    print(text)
+    u = re.findall('[A-Z]+', text)
+    u_str = ' '.join(u)
+    print(u_str)
+    if len(u) == len(text):
+        return True
+    else:
+        return False
+    
+    
+    
+
+
 
 if __name__ == '__main__':
 

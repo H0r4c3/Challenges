@@ -27,6 +27,21 @@ def birthday_party(birthday: datetime.date) -> datetime.date:
     
     return partyday
 
+
+# Best Solution: 
+# https://py.checkio.org/mission/birthday-party/publications/oduvan/python-3/keep-testing-match/
+
+import datetime
+
+def birthday_party_(birthday: datetime.date) -> datetime.date:
+    # your code here
+    match birthday.weekday():
+        case 5 | 6:
+            return birthday
+        case weekday:
+            return birthday + datetime.timedelta(days=5-weekday)
+
+
 print('Example:')
 print(birthday_party(datetime.date(2022, 1, 5)))
 

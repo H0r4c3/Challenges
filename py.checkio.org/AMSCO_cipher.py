@@ -19,7 +19,23 @@ def decode_amsco(message, key):
     return message
 
 
+# Best Solution: 
+# https://py.checkio.org/mission/amsco-cipher/publications/veky/python-3/i-forgot-about-this-one/?ordering=most_voted&filtering=all
+from itertools import cycle, islice, zip_longest
 
+def decode_amsco(message, key):
+    key, lenm, it = str(key), len(message), iter(message)
+    lens = {i: [start] for i, start in zip(key, cycle([1, 2]))}
+    total = sum(sum(lens.values(), []))
+    for column in map(lens.get, cycle(key)):
+        nextlen = min(lenm - total, 3 - column[~0])
+        if not nextlen: break
+        column.append(nextlen)
+        total += nextlen
+    seg = {i: [''.join(islice(it, lh)) for lh in lens[i]] for i in sorted(key)}
+    return ''.join(sum(zip_longest(*map(seg.get, key), fillvalue=''), ()))
+
+    
     
     
 # Solution: https://programtalk.com/vs2/python/6903/checkio/AMSCO%20cipher.py/

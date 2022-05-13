@@ -14,7 +14,29 @@ def replace_last(line: list) -> list:
     
     else:
         line1 = line[-1 : ] + line[0 : -1]
+        print(line1)
         return line1
+    
+    
+# Best Solutions:
+# https://py.checkio.org/mission/replace-last/publications/Phil15/python-3/three-solutions/
+
+# Change items IN-PLACE.
+def replace_last(items: list) -> list:
+    if items:
+        items.insert(0, items.pop())
+    return items
+
+# Slices
+def replace_last(items: list) -> list:
+    return items[-1:] + items[:-1]
+
+# collections.deque have an useful method: rotate.
+from collections import deque
+def replace_last(items: list) -> deque:
+    items = deque(items)
+    items.rotate(1)
+    return items
 
 
 if __name__ == '__main__':
