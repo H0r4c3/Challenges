@@ -20,7 +20,8 @@ def letter_queue_(commands: List[str]) -> str:
     return "".join(queue)
 
 
-# Another Solution
+
+# Another Solution (not allowed on checkio!!!)
 from queue import Queue
 def letter_queue(commands: List[str]) -> str:
     my_queue = Queue()
@@ -33,6 +34,20 @@ def letter_queue(commands: List[str]) -> str:
     print(my_queue.queue)
     
     return "".join(my_queue.queue)
+
+
+# Best Solution:
+# https://py.checkio.org/mission/letter-queue/publications/veky/python-3/double-ended/?ordering=most_voted&filtering=all
+
+import collections
+def letter_queue(commands):
+    queue = collections.deque()
+    for command in commands:
+        if command.startswith("PUSH"):
+            queue.append(command[-1])
+        elif queue:
+            queue.popleft()            
+    return "".join(queue)
     
 
 

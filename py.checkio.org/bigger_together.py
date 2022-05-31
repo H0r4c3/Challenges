@@ -20,7 +20,9 @@ def bigger_together_(ints: List[int]) -> int:
         return int(x + y) - int(y + x)
      
     ints_str = map(str, ints)
+    print(ints_str)
     ints_str_sort = sorted(ints_str, key = cmp_to_key(suma))
+    print(ints_str_sort)
 
     result = int(''.join(reversed(ints_str_sort))) - int(''.join(ints_str_sort))
     
@@ -28,11 +30,25 @@ def bigger_together_(ints: List[int]) -> int:
     return result
 
 
+# Best Solution:
+# https://py.checkio.org/mission/bigger-together/publications/BeranekP/python-3/bigger-together-naive-approach/?ordering=most_voted&filtering=all
+
+from itertools import permutations
 
 def bigger_together(ints: List[int]) -> int:
+    """
+        Returns difference between the largest and smallest values
+        that can be obtained by concatenating the integers together.
+    """
     
+    strs = [str(i) for i in ints]  # convert to strings
+    print(strs)
+    comb = permutations(strs, len(strs))  # find all possible combinations
+    print(comb)
+    nums = [int(''.join(c)) for c in comb]  # every comb -> join and convert to int  
+    print(nums)
     
-    return 0
+    return max(nums) - min(nums)
 
 
 # Best Solution: 

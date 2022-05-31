@@ -23,6 +23,20 @@ def checkio(data, my_sum=0):
     else: 
         return checkio(data, data.pop() + my_sum)
     
+    
+# Another Solution (using 'StopIteration')
+def checkio(data, my_sum=0):
+    x = iter(data)
+    try:
+        for i in range(len(data)):
+            print(x.__next__())
+            my_sum += x.__next__()
+        
+    except StopIteration as e:
+        print("StopIteration error handled successfully")
+        return my_sum
+        
+    
 
 
 

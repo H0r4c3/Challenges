@@ -13,6 +13,20 @@ def checkio(previous):
 
 
 
+# Best Solution: 
+# https://py.checkio.org/mission/ore-in-the-desert/publications/bryukh/python-3/second/?ordering=most_voted&filtering=all
+
+from math import hypot
+
+cells = [[i, j] for i in range(10) for j in range(10)]
+
+def checkio(data):
+    global cells
+    for x, y, d in data[-1:]:
+        cells = [[i, j] for i, j in cells if round(hypot(x - i, y - j), 0) == d]
+    return cells[0]
+
+
 
 # Best Solution: 
 # https://py.checkio.org/mission/ore-in-the-desert/publications/Somebody12345678910/python-3/first/share/cfd025f75ab8af45fba32a31dff34a9c/
@@ -39,6 +53,7 @@ def checkio(previous):
         candidates.remove(r)
     c = random.choice(candidates)
     return c
+
 
 
 
