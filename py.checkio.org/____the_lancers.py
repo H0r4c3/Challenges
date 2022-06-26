@@ -118,7 +118,115 @@ def fight(unit_1, unit_2):
     else:
         print('Draw')
         
-        
+
+# Best Solution: 
+# https://py.checkio.org/mission/the-lancers/publications/Moff/python-3/first/?ordering=most_voted&filtering=all
+
+
+class Warrior:
+    def __init__(self, health=50, attack=5):
+        self.health = health
+        self.attack = attack
+
+    @property
+    def is_alive(self):
+        return self.health > 0
+
+    def hit(self, other):
+        other.loss(self.attack)
+
+    def damage(self, attack):
+        return attack
+
+    def loss(self, attack):
+        self.health -= self.damage(attack)
+
+
+class Knight(Warrior):
+    def __init__(self):
+        super().__init__(attack=7)
+
+
+class Defender(Warrior):
+    def __init__(self):
+        super().__init__(health=60, attack=3)
+        self.defense = 2
+
+    def damage(self, attack):
+        return max(0, attack - self.defense)
+
+
+class Vampire(Warrior):
+    def __init__(self):
+        super().__init__(health=40, attack=4)
+        self.vampirism = 50
+
+    def hit(self, other):
+        super().hit(other)
+        self.health += other.damage(self.attack) * self.vampirism // 100
+
+
+class Lancer(Warrior):
+    def __init__(self):
+        super().__init__(attack=6)
+
+
+def fight(unit_1, unit_2):
+    while 1:
+        unit_1.hit(unit_2)
+        if unit_2.health <= 0:
+            return True
+        unit_2.hit(unit_1)
+        if unit_1.health <= 0:
+            return False
+
+
+class Army:
+    def __init__(self):
+        self.units = []
+
+    def add_units(self, unit_class, count):
+        for _ in range(count):
+            self.units.append(unit_class())
+
+    @property
+    def first_alive_unit(self):
+        for unit in self.units:
+            if unit.is_alive:
+                return unit
+
+    def next_unit(self, unit):
+        i = self.units.index(unit)
+        if i + 1 < len(self.units):
+            return self.units[i + 1]
+
+    @property
+    def is_alive(self):
+        return self.first_alive_unit is not None
+
+
+class Battle:
+    @staticmethod
+    def hit(unit_1, unit_2, army_2):
+        unit_3 = army_2.next_unit(unit_2)
+        unit_1.hit(unit_2)
+        if isinstance(unit_1, Lancer):
+            if unit_3:
+                unit_3.loss(unit_1.attack // 2)
+
+    @classmethod
+    def fight(cls, army_1, army_2):
+        while army_1.is_alive and army_2.is_alive:
+            unit_1 = army_1.first_alive_unit
+            unit_2 = army_2.first_alive_unit
+            while 1:
+                cls.hit(unit_1, unit_2, army_2)
+                if unit_2.health <= 0:
+                    break
+                cls.hit(unit_2, unit_1, army_1)
+                if unit_1.health <= 0:
+                    break
+        return army_1.is_alive
 
 
 if __name__ == '__main__':
@@ -178,9 +286,17 @@ if __name__ == '__main__':
     army_4.add_units(Vampire, 3)
     army_4.add_units(Warrior, 1)
     army_4.add_units(Lancer, 2)
+    
+    army_warrior = Army()
+    army_lancer = Army()
+    army_warrior.add_units(Warrior,2)
+    army_lancer.add_units(Lancer,1)
+    army_lancer.add_units(Warrior, 1)
 
     battle = Battle()
 
     assert battle.fight(my_army, enemy_army) == True
     assert battle.fight(army_3, army_4) == False
+    assert battle.fight(army_warrior, army_lancer) == False
+                        
     print("Coding complete? Let's try tests!")

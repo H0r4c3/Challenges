@@ -9,6 +9,7 @@ Your function should return a list where the values ​​of all figures will be
 0 is a symbol for separating the individual figures. If several figures have the same value, they can be pressed in any order.
 '''
 
+# NOK !!!!
 import numpy as np
 
 def buttons(ceiling):

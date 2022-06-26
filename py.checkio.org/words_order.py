@@ -35,7 +35,13 @@ def words_order(text: str, words: list) -> bool:
         return False
     
     
-    
+# Best Solution:
+# https://py.checkio.org/mission/words-order/publications/flpo/python-3/sorted-words/?ordering=most_voted&filtering=all
+
+def words_order(text, words):
+    text_words = {w for w in text.split() if w in words}
+    return list(sorted(text_words, key=text.index)) == words
+
     
 
 
