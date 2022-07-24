@@ -6,7 +6,7 @@ Your job is to sum only the numbers that are identical and consecutive.
 '''
 from itertools import groupby
 def sum_consecutives(a):
-    result = [sum(list(g)) for _, g in groupby(a)]
+    result = [sum(g) for _, g in groupby(a)]
     print(result)
 
     return result

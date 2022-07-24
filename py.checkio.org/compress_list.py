@@ -20,11 +20,22 @@ def compress_1(items: list) -> Iterable:
 
 # 2. Solution 
 import numpy as np
-def compress(items: list) -> Iterable:
+def compress_2(items: list) -> Iterable:
     indexes = np.where(np.diff(items) == 0)
     result = np.delete(items, indexes)
         
     return result
+
+
+# Best Solution: 
+# https://py.checkio.org/mission/compress-list/publications/veky/python-3/from-itertools-import-not-compress/share/3292ed7d1cf7df0122734cf9a4324e83/#comment-114135
+
+
+from itertools import groupby
+
+def compress(items):
+    for key, _ in groupby(items): yield key
+    
     
         
 
@@ -40,3 +51,4 @@ if __name__ == '__main__':
     assert list(compress([])) == []
     assert list(compress([1, 2, 3, 4])) == [1, 2, 3, 4]
     assert list(compress([9, 9, 9, 9, 9, 9, 9])) == [9]
+    print('Done!')
