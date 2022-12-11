@@ -26,6 +26,14 @@ def nearest_square(number):
     return round(number**0.5)**2
 
 
+# Best Solution:
+# https://py.checkio.org/mission/the-nearest-square-number/publications/kdim/python-3/1-line-clear-math/#comment-116070
+
+from math import sqrt
+def nearest_square(number):
+    return round(sqrt(number)) ** 2
+
+
 if __name__ == '__main__':
     print("Example:")
     print(nearest_square(8))

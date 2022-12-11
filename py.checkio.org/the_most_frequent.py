@@ -27,6 +27,11 @@ def most_frequent(data: list) -> str:
     return mode(data)
 
 
+# Another Best Solution: https://py.checkio.org/mission/the-most-frequent/publications/kdim/python-3/max-set/#comment-116079
+def most_frequent(data: list) -> str:
+    return max(set(data), key=data.count)
+
+
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
     print('Example:')

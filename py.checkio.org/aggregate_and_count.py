@@ -47,9 +47,11 @@ def aggregate_and_count_(items:list) -> dict:
 def aggregate_and_count(items:list) -> dict:
     result = {}
     
-    for item in items:
-        key = item[0]
-        value = item[1]
+    # for item in items:
+    #     key = item[0]
+    #     value = item[1]
+    
+    for key, value in items:
         
         if key not in result:
             result[key] = value

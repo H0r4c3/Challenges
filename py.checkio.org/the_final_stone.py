@@ -4,7 +4,7 @@
 You have a list of stones with different weights. The result of hitting two stones will be a new stone with a weight difference between the two stones.
 Your goal is to find the weight of the final stone. If no stones left, the result is 0.
 
-The algorith is very simple:
+The algorithm is very simple:
 
 get the two biggest stones in the batch
 hit and get the resulting stone

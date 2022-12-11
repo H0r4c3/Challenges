@@ -18,7 +18,7 @@ def to_encrypt(text, delta):
 
 
 # the best solution:
-def to_encrypt(text, delta):
+def to_encrypt_(text, delta):
     from string import ascii_lowercase as alphabet
     shifted = alphabet[delta:] + alphabet[:delta]
     return text.translate(str.maketrans(alphabet, shifted))
@@ -34,3 +34,4 @@ if __name__ == '__main__':
     assert to_encrypt("simple text", 16) == "iycfbu junj"
     assert to_encrypt("important text", 10) == "swzybdkxd dohd"
     assert to_encrypt("state secret", -13) == "fgngr frperg"
+    print('Done!')

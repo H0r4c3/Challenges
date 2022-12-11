@@ -31,7 +31,7 @@ def is_all_upper(text: str) -> bool:
 #Best Solution: https://py.checkio.org/mission/all-upper-ii/publications/five_east_west/python-3/one-line/?ordering=most_voted&filtering=all
 def is_all_upper(text: str) -> bool:
     # your code here
-    return text.isupper()
+    return text.upper() == text
 
 
 
@@ -48,3 +48,5 @@ if __name__ == '__main__':
     assert is_all_upper("Hi") == False
     assert is_all_upper("   ") == False
     assert is_all_upper("123") == False
+    assert is_all_upper('444') == True
+    assert is_all_upper('55 55 5') == True

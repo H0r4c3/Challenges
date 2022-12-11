@@ -30,7 +30,7 @@ def to_decrypt(cryptotext, delta):
 
 # Another solution:
 # https://py.checkio.org/mission/caesar-cipher-decryptor/publications/veky/python-3/punctuation-as-junk/?ordering=most_voted&filtering=all#comment-109909
-def to_decrypt(text, delta):
+def to_decrypt_(text, delta):
     from string import ascii_lowercase as alphabet, punctuation as junk
     shifted = alphabet[delta:] + alphabet[:delta]
     return text.translate(str.maketrans(alphabet, shifted, junk))
@@ -51,3 +51,4 @@ if __name__ == '__main__':
     assert to_decrypt("iycfbu!@# junj%&", -16) == "simple text"
     assert to_decrypt("*$#%swzybdkxd !)(^#%dohd", -10) == "important text"
     assert to_decrypt("fgngr **&&frperg^__^", 13) == "state secret"
+    print('Done!')
