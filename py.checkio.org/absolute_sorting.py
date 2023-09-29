@@ -5,8 +5,13 @@ The array (a list) has various numbers. You should sort it, but sort it by absol
 For example, the sequence (-20, -5, 10, 15) will be sorted like so: (-5, 10, 15, -20). Your function should return the sorted list or tuple.
 '''
 
-def checkio(values: list) -> list:
+def checkio_(values: list) -> list:
     values_sorted = sorted(values, key=lambda x : abs(x))
+    return values_sorted
+
+
+def checkio(values: list) -> list:
+    values_sorted = sorted(values, key=abs)
     return values_sorted
 
 
@@ -18,3 +23,5 @@ if __name__ == '__main__':
     assert checkio([-20, -5, 10, 15]) == [-5, 10, 15, -20]
     assert checkio([1, 2, 3, 0]) == [0, 1, 2, 3]
     assert checkio([-1, -2, -3, 0]) == [0, -1, -2, -3]
+    
+    print('Done!')

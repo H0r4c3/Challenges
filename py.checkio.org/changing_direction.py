@@ -40,6 +40,14 @@ def changing_direction_(elements: list[int]) -> int:
 
 
 # Best Solution:
+# https://py.checkio.org/mission/changing-direction/publications/kdim/python-3/zip-count/#comment-121484
+
+def changing_direction(e: list[int]) -> int:
+    s = ''.join('+-'[a > b] for a, b in zip(e, e[1:]) if a != b)
+    return s.count('+-') + s.count('-+')
+
+
+# Best Solution:
 # https://py.checkio.org/mission/changing-direction/publications/book1978/python-3/second/?ordering=most_voted&filtering=all
 
 def changing_direction(e: list) -> int:

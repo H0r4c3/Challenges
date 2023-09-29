@@ -34,6 +34,13 @@ def checkio(words):
     return True if re.search('\D+\s\D+\s\D+', words) else False
 
 
+# Best solution: https://py.checkio.org/mission/three-words/publications/kdim/python-3/research/
+
+import re
+def checkio(words: str) -> bool:
+    return bool(re.search(r'[a-z]+\s[a-z]+\s[a-z]+', words, re.IGNORECASE))
+
+
 
 
 #These "asserts" using only for self-checking and not necessary for auto-testing

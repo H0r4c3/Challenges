@@ -31,6 +31,15 @@ def final_stone(stones: list[int]) -> int:
 print('Example:')
 print(final_stone([1,2,3]))
 
+
+# Best Solution: https://py.checkio.org/mission/the-final-stone/publications/review/clear/
+
+from functools import reduce
+
+def final_stone_(stones: list[int]) -> int:
+    return reduce(lambda a, b: abs(a-b), sorted(stones, reverse=True), 0)
+
+
 #assert final_stone([list(range(1000000))]) == 0
 
 assert final_stone([3, 5, 1, 1, 9]) == 1

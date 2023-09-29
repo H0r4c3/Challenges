@@ -13,12 +13,33 @@ import re
 
 def is_number(val: str) -> bool:
     print(f'val = {val}')
-    # re.search('^?[+-]*[\d][.]*[\d]', val)
-    # re.search('[+-]?[\d]*+[.]*[\d]*', val)
-    #result = re.search('[+-]?[\d]+[.]*[\d]*|[+-]?[\d]*[.]*[\d]+', val)
-    result = re.search('[+-]?[\d]+[.]*[\d]*', val)
+    
+    result = re.search(r'^[+-]?(\d+\.\d*|\d*\.\d+|\d+)$', val)
     print(result)
     return bool(result)
+
+
+# Best Solution:
+# https://py.checkio.org/mission/is-string-a-number-part-ii/publications/review/clear/
+
+def is_number_(val: str) -> bool:
+    try:
+        float(val)
+        return True
+    except:
+        return False
+    
+
+# Best Solution:
+# https://py.checkio.org/mission/is-string-a-number-part-ii/publications/Kolia951/python-3/regex-will-kill-me/?ordering=most_voted&filtering=all
+
+def is_number_(val: str) -> bool:
+    regex = r"^[+-]?(\d+\.{1}\d*|\d*\.{1}\d+|\d+)$"
+    result = re.search(regex, val)
+    
+    return bool(result)
+
+
 
 print("Example:")
 #print(is_number("10"))

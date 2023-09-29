@@ -11,14 +11,25 @@ The final form of the polynomial should be in the following format:
 '''
 from sympy import sympify
 
-def simplify(expr):
-    
+def simplify_(expr):
     # convert expr to a type that can be used inside sympy
     new_expr = sympify(expr)
     print(new_expr)
     
     # expand the polynomial expression
     new_expr_exp = new_expr.expand()
+    print(new_expr_exp)
+    
+    # convert to string, in order to eliminate the spaces using replace()
+    result = str(new_expr_exp).replace(' ', '')
+    print(result)
+    
+    return result
+
+
+def simplify(expr):
+    # expand the polynomial expression
+    new_expr_exp = expand(expr)
     print(new_expr_exp)
     
     # convert to string, in order to eliminate the spaces using replace()

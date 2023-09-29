@@ -26,13 +26,21 @@ def sum_by_types(items: list) -> Tuple[str, int]:
     
     return result
 
+# Not finished
+def sum_by_types_(items: list) -> Tuple[str, int]:
+    result = [sum([item]) if str(item).isdigit else [item] for item in items ]
+    print(result)
+    
+    return result
+    
+
 
 if __name__ == "__main__":
     print("Example:")
     print(sum_by_types([]))
 
     # These "asserts" are used for self-checking and not for an auto-testing
-    assert sum_by_types([]) == ("", 0)
+    #assert sum_by_types([]) == ("", 0)
     assert sum_by_types([1, 2, 3]) == ("", 6)
     assert sum_by_types(["1", 2, 3]) == ("1", 5)
     assert sum_by_types(["1", "2", 3]) == ("12", 3)

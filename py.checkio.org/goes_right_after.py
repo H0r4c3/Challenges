@@ -34,6 +34,13 @@ def goes_after(word: str, first: str, second: str) -> bool:
         return True
     else:
         return False
+    
+    
+# Best Solution: https://py.checkio.org/mission/goes-after/publications/kdim/python-3/simple/?ordering=most_voted&filtering=all
+
+def goes_after(word: str, first: str, second: str) -> bool:
+    return 0 < word.find(first) + 1 == word.find(second)
+
 
 
 if __name__ == '__main__':

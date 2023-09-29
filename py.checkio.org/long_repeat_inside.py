@@ -11,25 +11,34 @@ def repeat_inside(line):
         first the longest repeating substring
     """
     print(f'line = {line}')
-    all_substrings = [line[i:j] for i in range(len(line)) for j in range(i+1, len(line) + 1)]
-    print(all_substrings)
     
+    # create a list with all possible substrings
+    all_substrings = [line[i:j] for i in range(len(line)) for j in range(i+1, len(line) + 1)]
+    print(f'all_substrings = {all_substrings}')
+    
+    # create a dictionary having keys = the substrings and values = the repetitions
     subs_dict = {item:line.count(item) for item in all_substrings if line.count(item) > 1}
-    print(subs_dict)
+    print(f'subs_dict = {subs_dict}')
     if subs_dict == {}:
         return ''
     
+    # create a new dictionary checking if the multiplied substring is in 'line'
     for key, value in subs_dict.items():
         for i in range(value, 0, -1):
             if key*i in line:
                 subs_dict[key] = i
+                print('break')
                 break
                 
     print(subs_dict)
+    print(subs_dict.items())
 
+    # create a list of tuples of substrings and repetitions
+    # sort the list after the length of (string*repetitions)
     sorted_subs = sorted(subs_dict.items(), key=lambda x : len(x[1]*x[0]), reverse=True)
-    print(sorted_subs)
+    print(f'sorted_subs = {sorted_subs}')
     
+    # result = the first item in the sorted list multiplied with repetitions
     print(f'result = {sorted_subs[0][0]*sorted_subs[0][1]}')
     return sorted_subs[0][0]*sorted_subs[0][1]
 

@@ -8,12 +8,18 @@ Input: The dictionary where the market identifier code is a key and the value is
 Output: The market identifier code (ticker symbol) as a string.
 '''
 
-def best_stock(data: dict) -> str:
+def best_stock_(data: dict) -> str:
     return max(data, key = lambda val: data[val])
 
 
-def best_stock(data: dict) -> str:
+def best_stock_(data: dict) -> str:
     return sorted(data.items(), key = lambda x: x[1], reverse=True)[0][0]
+
+
+# Best Solution: https://py.checkio.org/mission/best-stock/publications/kdim/python-3/first/
+
+def best_stock(data: dict) -> str:
+    return next(iter(sorted(data,key=data.get,reverse=True)))
 
 
 if __name__ == '__main__':

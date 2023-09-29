@@ -30,6 +30,16 @@ def checkio(data):
     print(Numbers.ONE.value + Numbers.TWO.value)
     return Numbers.ONE.value + Numbers.TWO.value
 
+# Another Solution (for using the cycle keyword)
+from itertools import cycle
+def checkio(data):
+    sum, c = 0, 0
+    for i in cycle(data):
+        c+=1
+        sum += i
+        if c > 1:
+            return sum 
+    
 
     
 if __name__ == '__main__':

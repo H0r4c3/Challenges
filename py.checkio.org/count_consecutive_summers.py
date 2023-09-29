@@ -21,19 +21,19 @@ def grouping(iterable, n):
         next(islice(it, i, i), None)                                               
     return zip(*iters)
 
-def count_consecutive_summers_(num):
+def count_consecutive_summers(num):
     rng = range(1, num+1)
-    print(list(rng))
+    #print(list(rng))
     counter = 0
     
     for i in range(num + 1):
         list_of_groups = list(grouping(rng, i))
         for item in list_of_groups:
             if sum(item) == num:
-                print(item)
+                #print(item)
                 counter += 1
     
-    print(counter)
+    print(num, counter)
     return counter
 
 
@@ -43,7 +43,9 @@ def count_consecutive_summers_(num):
 # Well, I saw that what we want is equal to the number of odd divisors of n so...
 #count_consecutive_summers = lambda n: sum(not n%k for k in range(1, n+1, 2))
 
-def count_consecutive_summers(num):
+def count_consecutive_summers_(num):
+    result = sum(not num%k for k in range(1, num+1, 2))
+    print(num, result)
     return sum(not num%k for k in range(1, num+1, 2))
     
 
@@ -54,7 +56,7 @@ def count_consecutive_summers(num):
 def count_consecutive_summers_(num):
     # your code here
     count = 0
-    for i in range(1,num+1):
+    for i in range(1, num+1):
         add = i
         sum = 0
         while sum <= num :
@@ -75,4 +77,7 @@ if __name__ == '__main__':
     assert count_consecutive_summers(99) == 6
     assert count_consecutive_summers(1) == 1
     assert count_consecutive_summers(15) == 4
+    assert count_consecutive_summers(4096) == 1
+    assert count_consecutive_summers(1575) == 18
+    assert count_consecutive_summers(2835) == 20
     print("Coding complete? Click 'Check' to earn cool rewards!")
