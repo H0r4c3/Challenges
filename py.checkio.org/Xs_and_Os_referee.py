@@ -21,6 +21,8 @@ from typing import List
 
 def checkio(game_result: List[str]) -> str:
     game_result_lists = map(list, game_result)
+    print(game_result)
+    print(game_result_lists)
     df = pd.DataFrame(game_result_lists, index=['r1', 'r2', 'r3'] , columns=['c1', 'c2', 'c3'])
     print(df, '\n')
     

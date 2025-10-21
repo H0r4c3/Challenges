@@ -566,7 +566,7 @@ def calculator(log: str) -> str:
     log = replace_digits_sign_digits_sign_equal_at_start(log)
     log = replace_digits_and_minus_or_plus_before_equal(log)
     log = repeating_the_last_operation(log)
-    log = repeating_the_last_operation_float(log)
+    repeating_the_last_operation_float(log)
     log = replace_signs_with_last(log)
     log = replace_equal_and_signs_at_end(log)
     log = replace_sign_or_equal_and_digit_at_end(log)

@@ -1,4 +1,4 @@
-'https://py.checkio.org/en/mission/calculator-iv/'
+'https://py.checkio.org/en/mission/calculator-v/'
 
 '''
 Expected behavior:
@@ -12,23 +12,16 @@ the calculator ignores digit you enter after 5th;
 if the abs(result) is more than 99999 - "error" is shown as a result;
 for float, if the integer part of abs(result) is more then 9999 - "error" is shown as a result;
 for float, in case the total length of number is more than 5 digits, it should be rounded to 5 digits (1.23456 -> 1.235);
-for float, beginning and trailing zeros should be removed (until the "." if possible): 0.1200 -> .12 , 123.00 -> 123. ;
-It should be done after the rounding: 1.000123 -> 1. . Stripping of trailing zeros should only be done after entering a number has concluded (non-digit character 
-pressed).
+for float, beginning and trailing zeros should be removed (until the "." if possible): 0.1200 -> .12 , 123.00 -> 123. . 
+It should be done after the rounding: 1.000123 -> 1. . Stripping of trailing zeros should only be done after entering a number has 
+concluded (non-digit character pressed).
 
-Steps for float:
-- if the integer part of abs(result) is more then 9999 - "error" is shown as a result
-- if the total length of number is more than 5 digits, it should be rounded to 5 digits (1.23456 -> 1.235)
-- if non-digit character is pressed, beginning and trailing zeros should be removed (until the "." if possible): 0.1200 -> .12 , 123.00 -> 123
+In the fifth mission your function should work properly with additional operations: *, /, // (integer division), % (modulo) 
+and ** (power) and their combinations with "=".
 '''
-# sys.path.append(r'C:\Users\Horace.000\eclipse-workspace\Python_Project_6_Online_Courses\00_ALL\Decorators')
 
-#import sys
 import re
 from decimal import Decimal
-#from timer_decorator import timer
-
-
 
 
 def left_strip_zeros_and_plus(log):
@@ -588,90 +581,46 @@ def calculator(log: str) -> str:
         return log
     except ValueError:
         print(f'log is not float or int')
-    
-    
+
+
+
 print("Example:")
-assert calculator('100000') == '10000'
+#print(calculator("10//2="))
 
-
-# These "asserts" are used for self-checking
-print(f'---1.---')
+#These "asserts" are used for self-checking
+assert calculator("10/2*2=") == "10."
+assert calculator("10/=*=-=") == "0."
+assert calculator("100//33**3=") == "27"
+assert calculator("10%10=") == "0"
+assert calculator("---+++100//3//3+++---") == "11"
+assert calculator("27**.3333=") == "3."
 assert calculator("0001.1000") == "1.100"
-print(f'---2.---')
 assert calculator("0001.1000-") == "1.1"
-print(f'---3.---')
 assert calculator("999.9999999+=") == "2000."
-print(f'---4.---')
 assert calculator("1.000123") == "1.000"
-print(f'---5.---')
 assert calculator("9999.9999999+=") == "error"
-print(f'---6.---')
 assert calculator("90000+10000=") == "error"
-print(f'---7.---')
 assert calculator("90000+10000-10000=") == "error"
-print(f'---8.---')
 assert calculator("90000+10000-10000") == "10000"
-print(f'---9.---')
 assert calculator("123456789") == "12345"
-print(f'---10.---')
 assert calculator("123456789+5=") == "12350"
-print(f'---11.---')
 assert calculator("5+123456789") == "12345"
-print(f'---12.---')
 assert calculator("50000+=") == "error"
-print(f'---13.---')
 assert calculator("3+=") == "6"
-print(f'---14.---')
 assert calculator("3+2==") == "7"
-print(f'---15.---')
 assert calculator("4-1==") == "2"
-print(f'---16.---')
 assert calculator("3+-2=") == "1"
-print(f'---17.---')
 assert calculator("-=-+3-++--+-2=-") == "1"
-print(f'---18.---')
 assert calculator("000000") == "0"
-print(f'---19.---')
 assert calculator("0000123") == "123"
-print(f'---20.---')
 assert calculator("12") == "12"
-print(f'---21.---')
 assert calculator("+12") == "12"
-print(f'---22.---')
 assert calculator("") == "0"
-print(f'---23.---')
 assert calculator("1+2") == "2"
-print(f'---24.---')
 assert calculator("2+") == "2"
-print(f'---25.---')
 assert calculator("1+2=") == "3"
-print(f'---26.---')
 assert calculator("1+2-") == "3"
-print(f'---27.---')
 assert calculator("1+2=2") == "2"
-print(f'---28.---')
 assert calculator("=5=10=15") == "15"
-print(f'---29.---')
-assert calculator('50000-====') == 'error'
-print(f'---30.---')
-assert calculator('5+7=') == '12'
-print(f'---31.---')
-assert calculator('2+3=+7=') == '12'
-print(f'---32.---')
-assert calculator('000005+003') == '3'
-print(f'---33.---')
-assert calculator('-5-10+15-') == '0'
-print(f'---34.---')
-assert calculator('+1+2+3+4=') == '10'
-print(f'---35.---')
-assert calculator('+') == '0'
-print(f'---36.---')
-assert calculator('0001.2005+=-1+10.43+99979') == '99979'
-print(f'---37.---')
-assert calculator('-+++--+.12009') == '.1200'
-print(f'---38.---')
-assert calculator('999.999+=========') == 'error'
-print(f'---39.---')
-assert calculator('100000') == '10000'
 
 print("The mission is done! Click 'Check Solution' to earn rewards!")
